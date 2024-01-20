@@ -1,0 +1,39 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="School.EvaluationsPage">
+    <StackLayout>
+        
+        <StackLayout>
+            <Picker x:Name="studentPicker" Title="Sélectionner un étudiant" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" />
+            <Picker x:Name="activityPicker" Title="Sélectionner une activité" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" />
+            <Picker x:Name="evaluationTypePicker" Title="Sélectionner le type d'évaluation" Margin="0,0,0,10" HorizontalOptions="FillAndExpand" />
+            <Entry x:Name="evaluationValueEntry" Placeholder="Valeur de l'évaluation" Margin="0,0,0,10" />
+            <Button Text="Ajouter l'évaluation" Clicked="OnCreateEvaluationClicked" Margin="0,0,0,20" />
+        </StackLayout>
+
+        <ListView x:Name="studentsTable">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding FullName }" HorizontalOptions="FillAndExpand" BackgroundColor="#4587A5" />
+                            <ListView ItemsSource="{Binding Evaluations}">
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{Binding Activity.Name}" HorizontalOptions="FillAndExpand" />
+                                                <Label Text="{Binding NoteValue}" HorizontalOptions="FillAndExpand" />
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

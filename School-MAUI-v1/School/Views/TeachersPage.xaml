@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="School.TeachersPage">
+    <StackLayout>
+        <Entry x:Name="firstNameEntry" Placeholder="Prénom" Margin="0,0,0,10" />
+        <Entry x:Name="lastNameEntry" Placeholder="Nom" Margin="0,0,0,10" />
+        <Entry x:Name="salaryEntry" Placeholder="Salaire" Keyboard="Numeric" Margin="0,0,0,10" />
+        <Button Text="Créer enseignant" Clicked="OnCreateTeacherClicked" Margin="0,0,0,20" />
+        <ListView x:Name="teachersTable">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" BackgroundColor="#4587A5">
+                    <Label Text="Prénom" HorizontalOptions="FillAndExpand" />
+                    <Label Text="Nom" HorizontalOptions="FillAndExpand" />
+                    <Label Text="Salaire" HorizontalOptions="FillAndExpand" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Firstname}" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Lastname}" HorizontalOptions="FillAndExpand" />
+                            <Label Text="{Binding Salary}" HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

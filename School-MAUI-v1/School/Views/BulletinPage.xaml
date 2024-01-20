@@ -1,0 +1,22 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="School.BulletinPage">
+
+
+    <StackLayout>
+        <Button Text="Générer les fichiers bulletins" Clicked="OnCreateBulletinsClicked" Margin="0,0,0,20" />
+        <ListView x:Name="studentsTable">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding FullName}" FontAttributes="Bold"  />
+                            <Label Text="{Binding Bulletin}"  Margin="0,0,0,20" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+</ContentPage>

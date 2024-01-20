@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="School.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:School"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+        Title="Accueil"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="homePage" />
+        <ShellContent
+        Title="Création des enseignants"
+        ContentTemplate="{DataTemplate local:TeachersPage}"
+        Route="teachersPage" />
+        <ShellContent
+        Title="Création des Activités"
+        ContentTemplate="{DataTemplate local:ActivitiesPage}"
+        Route="activitiesPage" />
+        <ShellContent
+        Title="Création des étudiants"
+        ContentTemplate="{DataTemplate local:StudentsPage}"
+        Route="studentsPage" />
+        <ShellContent
+        Title="Evaluations"
+        ContentTemplate="{DataTemplate local:EvaluationsPage}"
+        Route="evaluationsPage" />
+        <ShellContent
+        Title="Bulletin"
+        ContentTemplate="{DataTemplate local:BulletinPage}"
+        Route="bulletinPage" />
+    </TabBar>
+
+
+</Shell>
