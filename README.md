@@ -1,4 +1,4 @@
-MAUI-School
+## MAUI-School
 
 ## Vue d'Ensemble
 MAUI-School est une application MAUI conçue pour faciliter la gestion des écoles. Elle permet de suivre les activités, les évaluations, les étudiants et les enseignants à travers une interface utilisateur intuitive.
