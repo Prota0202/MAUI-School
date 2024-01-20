@@ -70,4 +70,4 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus d'informatio
 Pour toute question ou support, veuillez contacter Lababidi Abdelbadi.
 
 ## Discussion
-Pour un chat direct depuis GitHub allez dans la section  `DISCUSSION`.
+Pour un chat direct depuis GitHub allez dans la section  `DISCUSSIONS`.
