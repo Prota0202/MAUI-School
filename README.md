@@ -30,18 +30,23 @@ Les diagrammes de séquences fournissent une vue dynamique de l'application, ill
 - **Diagramme de Séquence pour la Page des Enseignants** : Il explique comment les détails d'un nouvel enseignant sont saisis et validés.
 
 Ces diagrammes assurent que chaque action est bien définie et se déroule dans l'ordre prévu, en conformité avec les principes SOLID de notre architecture logicielle.
+
 ![activity](https://github.com/Prota0202/MAUI-School/assets/153845537/00d75c62-dc9b-446d-968c-488c1e36eaad)
 ![bulletin](https://github.com/Prota0202/MAUI-School/assets/153845537/9f32ff8c-fffd-4437-b259-cb009834b530)
 ![evaluation](https://github.com/Prota0202/MAUI-School/assets/153845537/e478cbd7-3884-4e22-8fd6-cdaead59e1b0)
 ![student](https://github.com/Prota0202/MAUI-School/assets/153845537/964e302a-b6cc-41a4-a36a-dfc4fe9c3428)
 ![teacher](https://github.com/Prota0202/MAUI-School/assets/153845537/d0e0a9d3-7d35-4d3d-806a-6492c0fce059)
+
 ### Diagrammes de Classes
 Le diagramme de classes offre une vue statique de l'application, représentant les objets et les relations entre eux. Voici notre diagramme de classes :
 
 - **Diagramme de Classes de MAUI-School** : Ce diagramme présente la structure des classes, y compris les attributs et les méthodes, ainsi que les relations d'héritage, d'association et d'agrégation.
 
 Ces diagrammes de classes sont essentiels pour comprendre la structure sous-jacente de l'application et pour assurer que les principes de conception sont suivis de manière cohérente.
+
 ![diagramm class](https://github.com/Prota0202/MAUI-School/assets/153845537/ac445575-6822-407d-b2ad-abe81fc77dd6)
+
+Pour visualiser les diagrammes de maniere plus claire, veuillez consulter les fichiers joints dans le répertoire du projet.
 
 ## Démarrage Rapide
 ### Prérequis
