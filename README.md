@@ -67,7 +67,7 @@ Les diagrammes de séquence ci-joints offrent une vue détaillée de l'interacti
 Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus d'informations.
 
 ## Contact
-Pour toute question ou support, veuillez contacter Lababidi Abdelbadi.
+Pour toute question ou support, veuillez contacter 20369@ecam.be.
 
 ## Discussion
 Pour un chat direct depuis GitHub allez dans la section  `DISCUSSIONS`.
