@@ -11,6 +11,12 @@ namespace School
         public BulletinPage()
         {
             InitializeComponent();
+            
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
             LoadEvaluations();
         }
 
@@ -18,6 +24,7 @@ namespace School
         private void LoadEvaluations()
         {
             List<Student> listStudentsEvaluations = new List<Student>();
+            students = new ObservableCollection<Student>();
             if (schoolDataSingleton.LoadDataEvaluation(listStudentsEvaluations))
             {
                 listStudentsEvaluations.ToList().ForEach(students.Add);

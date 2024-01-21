@@ -7,8 +7,7 @@ namespace School
     {
         private ObservableCollection<Student> students = new ObservableCollection<Student>();
         private ObservableCollection<Activity> activities = new ObservableCollection<Activity>();
-
-        private ObservableCollection<Evaluation> evaluations = new ObservableCollection<Evaluation>();
+        private ObservableCollection<Student> studentsEvaluations = new ObservableCollection<Student>();
 
         SchoolDataSingleton schoolDataSingleton = SchoolDataSingleton.Instance;
         SchoolDataWriterSingleton schoolDataWriterSingleton = SchoolDataWriterSingleton.Instance;
@@ -33,30 +32,35 @@ namespace School
         private void LoadEvaluations()
         {
             List<Student> listStudentsEvaluations = new List<Student>();
-            evaluations = new ObservableCollection<Evaluation>();
-            schoolDataSingleton.LoadDataEvaluation(listStudentsEvaluations);
-            studentsTable.ItemsSource = listStudentsEvaluations;
+            studentsEvaluations = new ObservableCollection<Student>();
+            if (schoolDataSingleton.LoadDataEvaluation(listStudentsEvaluations))
+            {
+                listStudentsEvaluations.ToList().ForEach(studentsEvaluations.Add);
+            }
+            studentsTable.ItemsSource = studentsEvaluations;
         }
 
         private void LoadActivities()
         {
+            activities = new ObservableCollection<Activity>();
             List<Activity> listActivities = new List<Activity>();
             if (schoolDataSingleton.LoadDataTeachersAndActivities(new List<Teacher>(), listActivities))
             {
                 listActivities.ToList().ForEach(activities.Add);
             }
-            activityPicker.ItemsSource = listActivities;
+            activityPicker.ItemsSource = activities;
 
         }
 
         private void LoadStudents()
         {
             List<Student> listStudents = new List<Student>();
+            students = new ObservableCollection<Student>();
             if (schoolDataSingleton.LoadDataStudents(listStudents))
             {
                 listStudents.ToList().ForEach(students.Add);
             }
-            studentPicker.ItemsSource = listStudents;
+            studentPicker.ItemsSource = students;
         }
 
         private void OnCreateEvaluationClicked(object sender, EventArgs e)

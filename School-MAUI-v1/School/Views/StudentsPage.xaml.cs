@@ -12,16 +12,23 @@ namespace School
         public StudentsPage()
         {
             InitializeComponent();
-            LoadStudents();
-            studentsTable.ItemsSource = students;
+            
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadStudents();
+        }
+
         private void LoadStudents()
         {
             List<Student> listStudents = new List<Student>();
+            students = new ObservableCollection<Student>();
             if (schoolDataSingleton.LoadDataStudents(listStudents))
             {
                 listStudents.ToList().ForEach(students.Add);
             }
+
             studentsTable.ItemsSource = students;
         }
 

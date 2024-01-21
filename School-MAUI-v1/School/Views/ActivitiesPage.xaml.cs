@@ -27,6 +27,7 @@ namespace School
         private void LoadTeachersAndActivities()
         {
             List<Activity> listActivities = new List<Activity>();
+            Activities = new ObservableCollection<Activity>();
             if (schoolDataSingleton.LoadDataTeachersAndActivities(new List<Teacher>(), listActivities))
             {
                 listActivities.ToList().ForEach(Activities.Add);
@@ -34,12 +35,13 @@ namespace School
             activitiesTable.ItemsSource = Activities;
 
             List<Teacher> listTeachers = new List<Teacher>();
+            teachers = new ObservableCollection<Teacher>();
 
             if (schoolDataSingleton.LoadDataTeachers(listTeachers))
             {
                 listTeachers.ToList().ForEach(teachers.Add);
             }
-            teacherPicker.ItemsSource = listTeachers;
+            teacherPicker.ItemsSource = teachers;
         }
 
         private void OnCreateActivityClicked(object sender, EventArgs e)

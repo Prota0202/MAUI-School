@@ -12,16 +12,23 @@ namespace School
         public TeachersPage()
         {
             InitializeComponent();
-            LoadTeachers();
-            teachersTable.ItemsSource = teachers;
+            
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadTeachers();
+        }
+
         private void LoadTeachers()
         {
             List<Teacher> listTeachers = new List<Teacher>();
+            teachers = new ObservableCollection<Teacher>();
             if (schoolDataSingleton.LoadDataTeachers(listTeachers))
             {
                 listTeachers.ToList().ForEach(teachers.Add);
             }
+
             teachersTable.ItemsSource = teachers;
         }
 
