@@ -14,6 +14,9 @@ MAUI-School est une application MAUI conçue pour faciliter la gestion des écol
 Notre application respecte les principes SOLID pour assurer une architecture logicielle robuste et maintenable :
 - **Single Responsibility (SRP) :** Ce principe stipule qu'une classe ne devrait avoir qu'une seule raison de changer, c'est-à-dire qu'elle devrait faire une seule chose. Dans notre application, chaque page (comme "TeachersPage", "ActivitiesPage", etc.) a sa propre responsabilité et n'interfère pas avec les responsabilités des autres pages.
 - **Open/Closed (OCP) :** Ce principe stipule que les classes devraient être ouvertes à l'extension mais fermées à la modification. Dans notre application, on peut ajouter de nouvelles fonctionnalités ou modifier celles existantes en créant de nouvelles pages ou en modifiant celles existantes sans affecter la structure globale de l'application.
+- **Liskov Substitution :** Les sous-classes peuvent être échangées sans perturber les fonctionnalités de l'application.
+- **Interface Segregation :** Les interfaces sont spécifiquement définies pour les besoins des utilisateurs de l'API.
+- **Dependency Inversion :** Les dépendances dans l'application s'appuient sur des abstractions plutôt que sur des concrétisations.
 
 ## Démarrage Rapide
 ### Prérequis
