@@ -93,6 +93,11 @@ Pour visualiser les diagrammes de maniere plus claire, veuillez consulter les fi
 - **Validation :** L'application s'assure que le salaire est un nombre et que l'enseignant n'existe pas déjà.
 - **Enregistrement :** Les informations sont sauvegardées dans la base de données.
 
+### Génération de fichiers 
+Bien vérifié où seront générer vos bulletins !
+
+![Capture](https://github.com/Prota0202/MAUI-School/assets/153845537/71e9d47c-d877-4558-aff8-5ab4bc3f2b84)
+
 ## Architecture et Conception
 Les diagrammes de séquence ci-joints offrent une vue détaillée de l'interaction entre l'utilisateur, les différentes pages de l'application, et les composants backend. Ils illustrent également comment l'application respecte les principes SOLID pour une conception robuste et maintenable.
 
