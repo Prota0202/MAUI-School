@@ -10,9 +10,9 @@
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="C:\Users\AbdelBadi\Desktop\MAUI-School\School-MAUI-v1\School\Resources\Images\new.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
+                HeightRequest="450"
                 HorizontalOptions="Center" />
 
             <Label
